@@ -304,6 +304,8 @@
     showToast("Clique na tela para ativar o som", 3500);
 
     document.addEventListener("click", enableSound, { once: true });
+    document.addEventListener("touchstart", enableSound, { once: true, passive: true });
+    document.addEventListener("pointerdown", enableSound, { once: true });
 
     copyBtn.addEventListener("click", () => {
       copyToClipboard(window.location.href)
