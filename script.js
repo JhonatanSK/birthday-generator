@@ -202,14 +202,14 @@
     });
   }
 
-  function showToast(message) {
+  function showToast(message, duration = 2000) {
     if (!toastEl) return;
     toastEl.textContent = message;
     toastEl.classList.add("show");
     clearTimeout(showToast._timer);
     showToast._timer = setTimeout(() => {
       toastEl.classList.remove("show");
-    }, 2000);
+    }, duration);
   }
 
   function initGeneratorPage() {
@@ -286,11 +286,24 @@
     }
 
     const videoId = vParam || DEFAULT_VIDEO_ID;
-    frame.src = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&mute=1`;
+    const baseVideoUrl = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
+    frame.src = `${baseVideoUrl}&mute=1`;
+    let unmuted = false;
 
     loadMemesIndex().then((index) => {
       renderMemes(nomeParam || "", limitParam, index);
     });
+
+    function enableSound() {
+      if (unmuted) return;
+      unmuted = true;
+      frame.src = `${baseVideoUrl}&mute=0`;
+      showToast("Som ativado 🔊");
+    }
+
+    showToast("Clique na tela para ativar o som", 3500);
+
+    document.addEventListener("click", enableSound, { once: true });
 
     copyBtn.addEventListener("click", () => {
       copyToClipboard(window.location.href)
