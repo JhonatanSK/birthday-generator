@@ -286,7 +286,7 @@
     }
 
     const videoId = vParam || DEFAULT_VIDEO_ID;
-    const baseVideoUrl = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
+    const baseVideoUrl = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&loop=1&playlist=${videoId}`;
     frame.src = `${baseVideoUrl}&mute=1`;
     let unmuted = false;
 
