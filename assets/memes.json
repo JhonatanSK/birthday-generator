@@ -10,5 +10,9 @@
     "assets/default/sad-meme.gif",
     "assets/default/trump-dance.gif"
   ],
-  "special": {}
+  "special": {
+    "cj": [
+      "assets/special/cj/cj-1.gif"
+    ]
+  }
 }
