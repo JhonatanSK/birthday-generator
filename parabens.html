@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parabens</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page page--parabens" id="parabens-page">
+    <header class="topbar">
+      <div class="topbar__title">
+        <span class="badge">🎂</span>
+        <div>
+          <small>Cartao de aniversario</small>
+          <h1>Parabens</h1>
+        </div>
+      </div>
+      <button id="copy-current" class="btn btn--ghost" type="button">🔗 Copiar link com nome</button>
+    </header>
+
+    <section class="card card--hero">
+      <div class="hero__grid">
+        <div class="hero__left">
+          <div class="hero__sticker">WOW!</div>
+          <div class="hero__sticker hero__sticker--alt">TOP 1</div>
+          <h2 id="headline">Parabens, amigo(a)! 🎉</h2>
+          <p id="message" class="lead"></p>
+          <div id="chips" class="chips"></div>
+          <p id="missing-name" class="warning hidden">Voce nao passou o nome 😅 Use: ?nome=SeuNome</p>
+          <p id="signature" class="signature hidden"></p>
+        </div>
+        <div class="hero__right">
+          <p class="hero__banner">FELIZ ANIVERSARIO</p>
+          <ul class="hero__list">
+            <li>100% nostalgia</li>
+            <li>0% formalidade</li>
+            <li>+100 alegria</li>
+          </ul>
+          <p class="hero__marquee">*** PARABENS *** PARABENS *** PARABENS ***</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troque os arquivos dentro de assets/ pelos seus memes -->
+    <div id="meme-container" class="meme-grid meme-grid--floating"></div>
+
+    <section class="card">
+      <h3>Video especial</h3>
+      <div class="video">
+        <iframe
+          id="yt-frame"
+          title="Video de aniversario"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Hospedado no GitHub Pages</small>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
