@@ -155,13 +155,19 @@
     const specials = memeIndex.special[normalizeKey(nome)] || null;
     const defaults = memeIndex.default;
     let memes = [];
+    const specialNames = new Set(
+      (specials || []).map((src) => src.split("/").pop().toLowerCase())
+    );
 
     if (specials && specials.length) {
       if (limit && specials.length > limit) {
         memes = shuffle(specials).slice(0, limit);
       } else if (limit && specials.length < limit) {
         const extraCount = limit - specials.length;
-        const extras = shuffle(defaults).filter((src) => !specials.includes(src));
+        const extras = shuffle(defaults).filter((src) => {
+          const name = src.split("/").pop().toLowerCase();
+          return !specialNames.has(name) && !specials.includes(src);
+        });
         memes = specials.concat(extras.slice(0, extraCount));
       } else {
         memes = specials;
