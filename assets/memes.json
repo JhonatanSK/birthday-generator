@@ -1,18 +1,32 @@
 {
   "default": [
     "assets/default/birthday-happy-birthday-102.gif",
+    "assets/default/carminha-bolsonaro.gif",
+    "assets/default/carminha.gif",
+    "assets/default/chair-back.gif",
+    "assets/default/child-funny.gif",
+    "assets/default/child-suspect.gif",
+    "assets/default/devil.gif",
     "assets/default/gross-eek.gif",
     "assets/default/h2di-cat-dead.gif",
     "assets/default/kid-how-my-life-is-going.gif",
     "assets/default/maduro.gif",
     "assets/default/michael-scott-surprised.gif",
+    "assets/default/monalisa.gif",
     "assets/default/pele-voce.gif",
+    "assets/default/pig.gif",
     "assets/default/sad-meme.gif",
+    "assets/default/the-rock.gif",
     "assets/default/trump-dance.gif"
   ],
   "special": {
     "cj": [
-      "assets/special/cj/cj-1.gif"
+      "assets/special/cj/cj-1.gif",
+      "assets/special/cj/cj-pedro.gif"
+    ],
+    "maira": [
+      "assets/special/maira/maira-orran.gif",
+      "assets/special/maira/monalisa.gif"
     ]
   }
 }
