@@ -22,9 +22,13 @@
   "special": {
     "cj": [
       "assets/special/cj/cj-1.gif",
+      "assets/special/cj/cj-amarelinha.gif",
+      "assets/special/cj/cj-chapeuzinho.gif",
       "assets/special/cj/cj-pedro.gif",
+      "assets/special/cj/cj-rebolada.gif",
       "assets/special/cj/cj-surfista.gif",
-      "assets/special/cj/mc-uides.gif"
+      "assets/special/cj/mc-uides.gif",
+      "assets/special/cj/meu-patrao.gif"
     ],
     "maira": [
       "assets/special/maira/maira-orran.gif",
